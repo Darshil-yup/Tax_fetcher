@@ -1,0 +1,47 @@
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+*.egg
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ─── Virtual Environments ─────────────────────────────────────────────────────
+venv/
+env/
+.env
+.venv/
+
+# ─── PyInstaller Build Artifacts ──────────────────────────────────────────────
+build/
+dist/
+*.spec.bak
+
+# ─── Playwright / Browser Cache ───────────────────────────────────────────────
+.playwright/
+playwright-report/
+
+# ─── Excel Temp Files ─────────────────────────────────────────────────────────
+~$*.xlsx
+~$*.xlsm
+~$*.xls
+*.xlsb
+
+# ─── OS & Editor ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── Large / Binary Demo Assets (not needed in source repo) ───────────────────
+# The MP4 demo video is too large for GitHub — link it from LinkedIn/YouTube
+*.mp4
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+*.log

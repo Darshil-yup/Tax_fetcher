@@ -1,0 +1,9 @@
+# Illinois Tax Rate Scraper — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+playwright>=1.40.0    # Headless Chromium browser automation
+xlwings>=0.30.0       # Excel COM bridge (real-time read/write)
+pywin32>=306          # Windows COM interface required by xlwings
+
+# After installing, run:
+# playwright install chromium
