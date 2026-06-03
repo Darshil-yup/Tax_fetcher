@@ -14,7 +14,7 @@ env:
 
 jobs:
   test:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -27,7 +27,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest playwright xlwings pywin32
+        pip install pytest playwright
         
     - name: Run pytest
       run: |
