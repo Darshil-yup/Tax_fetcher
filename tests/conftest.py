@@ -1,8 +1,18 @@
 import sys
 from unittest.mock import MagicMock
 
-# Mock xlwings and win32 modules before importing tax_scraper
-sys.modules['xlwings'] = MagicMock()
-sys.modules['win32com'] = MagicMock()
-sys.modules['win32com.client'] = MagicMock()
-sys.modules['win32com.client.dynamic'] = MagicMock()
+# Block ALL windows-only and Excel modules before anything else imports them
+_win_modules = [
+    'win32com',
+    'win32com.client',
+    'win32api',
+    'win32con',
+    'pythoncom',
+    'pywintypes',
+    'xlwings',
+    'xlwings.constants',
+    'xlwings.utils',
+]
+
+for mod in _win_modules:
+    sys.modules[mod] = MagicMock()

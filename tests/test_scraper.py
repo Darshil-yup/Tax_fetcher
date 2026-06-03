@@ -1,7 +1,7 @@
 import pytest
-from tax_scraper import strip_street_suffix, parse_pct
 
 def test_strip_street_suffix():
+    from tax_scraper import strip_street_suffix
     # Test common suffixes are stripped
     assert strip_street_suffix("500 W Madison St") == "500 W Madison"
     assert strip_street_suffix("100 S Wacker Dr") == "100 S Wacker"
@@ -21,6 +21,7 @@ def test_strip_street_suffix():
     assert strip_street_suffix("Loop") == "Loop"
 
 def test_parse_pct():
+    from tax_scraper import parse_pct
     # Test standard percentages
     assert parse_pct("1.750%") == 0.0175
     assert parse_pct("10.25%") == 0.1025
